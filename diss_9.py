@@ -35,16 +35,23 @@ def findLetters(sentences):
 
     # define the regular expression
     
-
+    
+    lst = []
     # loop through each sentence or phrase in sentences
+    for sentence in sentences:
+        val = re.findall('(?:@([0-9]{1,2}[ ]{0,1}[ap]m))', sentence)
+        if val:
+            lst.append(val[0])
+        print (val)
+        #print(sentence)
     
 
     # find all the words that match the regular expression in each sentence
        
-
     # loop through the found words and add the words to your empty list
 
-
+    print (lst)
+    return (lst)
     #return the list of the last letter of all words that begin or end with a capital letter
     pass
 
